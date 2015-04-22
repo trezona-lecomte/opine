@@ -1,12 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Album, type: :model do
-
-  describe ""
     
-  it "should be invalid without name" do
-    album = Album.create(name: "")
+  it "is invalid without name" do
+    album = Album.create(name: "  ")
     expect(album.valid?).to be false
   end
+
+  it "is valid with only a name" do
+    album = Album.create(name: "Radiohead")
+    expect(album.valid?).to be true
+  end
+
+
 
 end
