@@ -2,10 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Artist, type: :model do
 
-  it "is invalid without name" do
-    artist = Artist.create(name: "  ")
-    expect(artist.valid?).to be false
-  end
+  it { should validate_presence_of(:name) }
 
   it "is valid with only a name" do
     artist = Artist.create(name: "Thom Yorke")
