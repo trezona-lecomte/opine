@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422114350) do
+ActiveRecord::Schema.define(version: 20150422120933) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150422114350) do
     t.datetime "updated_at",  null: false
     t.string   "href"
     t.string   "spotify_uri"
+    t.string   "image_url"
   end
 
 end
