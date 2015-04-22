@@ -8,7 +8,7 @@ RSpec.describe Album, type: :model do
   end
 
   it "is valid with only a name" do
-    album = Album.create(name: "Radiohead")
+    album = Album.create(name: "Amnesiac")
     expect(album.valid?).to be true
   end
 
