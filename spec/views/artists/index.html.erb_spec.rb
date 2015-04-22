@@ -4,16 +4,17 @@ RSpec.describe "artists/index", type: :view do
   before(:each) do
     assign(:artists, [
       Artist.create!(
-        :name => "Name"
+        :name => "Fleet Foxes"
       ),
       Artist.create!(
-        :name => "Name"
+        :name => "Thom Yorke"
       )
     ])
   end
 
   it "renders a list of artists" do
     render
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
+    assert_select "tr>td", :text => "Fleet Foxes".to_s, :count => 1
+    assert_select "tr>td", :text => "Thom Yorke".to_s, :count => 1
   end
 end
