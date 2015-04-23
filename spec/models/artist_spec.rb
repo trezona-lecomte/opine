@@ -4,15 +4,9 @@ RSpec.describe Artist, type: :model do
 
   it { should validate_presence_of(:name) }
 
-  it "is valid with only a name" do
-    artist = Artist.create(name: "Thom Yorke")
+  it "is valid after creation" do
+    artist = build(:artist)
     expect(artist.valid?).to be true
   end
-
-  it "is invalid when name isn't unique" do
-    artist = Artist.create(name: "Radiohead")
-    imposter = Artist.create(name: "Radiohead")
-    expect(imposter.valid?).to be false
-  end
-
+  
 end
