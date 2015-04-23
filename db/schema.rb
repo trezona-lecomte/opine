@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423102436) do
+ActiveRecord::Schema.define(version: 20150423105651) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name"
@@ -30,5 +30,17 @@ ActiveRecord::Schema.define(version: 20150423102436) do
     t.string   "spotify_uri"
     t.string   "image_url"
   end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "artist_id"
+    t.integer  "album_id"
+    t.integer  "length"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tracks", ["album_id"], name: "index_tracks_on_album_id"
+  add_index "tracks", ["artist_id"], name: "index_tracks_on_artist_id"
 
 end
