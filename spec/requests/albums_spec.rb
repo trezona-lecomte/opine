@@ -2,9 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "Albums", type: :request do
   describe "GET /albums" do
-    it "works! (now write some real specs)" do
-      get albums_path
-      expect(response).to have_http_status(200)
+    
+    context "when user isn't signed in" do
+      it "redirects to sign in" do
+        get albums_path
+        expect(response).to have_http_status(302)
+      end
     end
   end
 end
