@@ -13,6 +13,7 @@ gem 'therubyracer',          '0.12.2'
 gem 'devise',                '3.4.0'
 gem 'omniauth',              '1.2.2'
 gem 'omniauth-digitalocean', '0.1.0'
+gem 'omniauth-spotify',      '0.0.8'
 
 group :development, :test do
   gem 'rspec-rails',        '~> 3.0'

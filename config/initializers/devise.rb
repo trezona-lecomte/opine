@@ -235,6 +235,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :digitalocean, ENV["DIGITAL_OCEAN_ID"], 
                                  ENV["DIGITAL_OCEAN_SECRET"]
+  config.omniauth :spotify, ENV["SPOTIFY_ID"],
+                            ENV["SPOTIFY_SECRET"]
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
