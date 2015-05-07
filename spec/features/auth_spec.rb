@@ -7,7 +7,7 @@ describe 'UserRegistration' do
     fill_in 'Password', with: 'newpassword'
     fill_in 'Password confirmation', with: 'newpassword'
     click_button 'Sign up'
-    page.should have_content 'Welcome'
+    expect(page).to have_content 'Welcome'
   end
 end
 
@@ -18,6 +18,6 @@ describe 'UserSignin' do
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_button 'Log in'
-    page.should have_content 'Signed in successfully'
+    expect(page).to have_content 'Signed in successfully'
   end
 end
