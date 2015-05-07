@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'UserRegistration' do
-  it 'should allow a user to register' do
+  it 'should allow a user to register manually' do
     visit new_user_registration_path
     fill_in 'Email', with: 'newuser@example.com'
     fill_in 'Password', with: 'newpassword'
