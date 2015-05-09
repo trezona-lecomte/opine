@@ -6,8 +6,22 @@ module OmniauthTestHelper
         provider: 'digitalocean',
         uid: '12345',
         info: {
-          'name' => 'Kieran Trezona-le Comte',
-          'email' => 'kieran@trezona.com'
+          name: 'Danny Digitalocean',
+          email: 'danny@digitalocean.com'
+        }
+      })
+    end
+  end
+
+  def valid_spotify_login_setup
+    if Rails.env.test?
+      OmniAuth.config.test_mode = true
+      OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
+        provider: 'spotify',
+        uid: '23456',
+        info: {
+          name: 'Sammy Spotify',
+          email: 'sammy@spotify.com'
         }
       })
     end
