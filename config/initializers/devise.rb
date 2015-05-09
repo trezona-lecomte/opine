@@ -237,6 +237,8 @@ Devise.setup do |config|
                                  ENV["DIGITAL_OCEAN_SECRET"]
   config.omniauth :spotify, ENV["SPOTIFY_ID"],
                             ENV["SPOTIFY_SECRET"]
+  config.omniauth :facebook, ENV["FACEBOOK_ID"],
+                             ENV["FACEBOOK_SECRET"]
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
