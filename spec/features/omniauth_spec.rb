@@ -29,13 +29,3 @@ describe 'Facebook Login' do
     expect(page).to have_content 'Listing Artists'
   end
 end
-
-describe 'Google Login' do
-  it 'allows a valid google user to log in' do
-    valid_google_login_setup
-    visit new_user_session_path
-    expect(page).to have_content 'Log in'
-    click_link 'Sign in with Google'
-    expect(page).to have_content 'Listing Artists'
-  end
-end
