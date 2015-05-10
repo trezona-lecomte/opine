@@ -40,18 +40,4 @@ module OmniauthTestHelper
       })
     end
   end
-
-  def valid_google_login_setup
-    if Rails.env.test?
-      OmniAuth.config.test_mode = true
-      OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-        provider: 'google',
-        uid: '45678',
-        info: {
-          name: 'Greg Google',
-          email: 'greg@google.com'
-        }
-      })
-    end
-  end
 end
