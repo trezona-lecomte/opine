@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'UserRegistration' do
-  it 'should allow a user to register manually' do
+describe 'Devise User Registration' do
+  it 'allows a user to register manually' do
     visit new_user_registration_path
     fill_in 'Email', with: 'newuser@example.com'
     fill_in 'Password', with: 'newpassword'
@@ -11,8 +11,8 @@ describe 'UserRegistration' do
   end
 end
 
-describe 'UserSignin' do
-  it 'should allow a registered user to login' do
+describe 'Devise User Signin' do
+  it 'allows a registered user to login' do
     user = create(:devise_user)
     visit new_user_session_path
     fill_in 'Email', with: user.email
