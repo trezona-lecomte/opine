@@ -17,6 +17,8 @@ gem 'omniauth',              '1.2.2'
 gem 'omniauth-digitalocean', '0.1.0'
 gem 'omniauth-spotify',      '0.0.8'
 gem 'omniauth-facebook',     '2.0.1'
+gem 'faker',                 '1.4.3'
+gem 'require_all',           '1.3.2'
 
 group :development, :test do
   gem 'rspec-rails',        '~> 3.0'
