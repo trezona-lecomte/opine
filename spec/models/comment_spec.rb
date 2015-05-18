@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe Comment, type: :model do
   
-  it { should validate_presence_of(:text) }
+  it { should validate_presence_of :text }
 
-  before(:each) do
-    @comment = build(:comment)
+  before :each do
+    @comment = build :comment
   end
 
   it 'is valid' do
