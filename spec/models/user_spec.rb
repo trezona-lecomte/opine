@@ -16,8 +16,4 @@ describe User, type: :model do
     expect(@user).to be_valid
   end
 
-  it 'has valid comments' do
-    # expect(@user.comments.a
-  end
-
 end
