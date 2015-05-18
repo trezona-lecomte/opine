@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User, type: :model do
 
-  it { validate_presence_of :name }
+  it { should validate_presence_of :name }
 
   before :each do
     @user = create :user
@@ -11,4 +11,5 @@ describe User, type: :model do
   it 'is valid' do
     expect(@user).to be_valid
   end
+
 end
