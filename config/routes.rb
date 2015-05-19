@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
-    root "devise/sessions#new"
+    root "conversations#index"
   end
   resources :tracks
   resources :artists
   resources :albums
+  resources :conversations
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
