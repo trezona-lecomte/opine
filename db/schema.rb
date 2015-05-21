@@ -46,12 +46,12 @@ ActiveRecord::Schema.define(version: 20150519074508) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "conversations", force: :cascade do |t|
-    t.integer  "Group_id"
+    t.integer  "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "conversations", ["Group_id"], name: "index_conversations_on_Group_id", using: :btree
+  add_index "conversations", ["group_id"], name: "index_conversations_on_group_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 20150519074508) do
 
   add_foreign_key "comments", "conversations"
   add_foreign_key "comments", "users"
-  add_foreign_key "conversations", "groups", column: "id"
+  add_foreign_key "conversations", "groups"
   add_foreign_key "tracks", "albums"
   add_foreign_key "tracks", "artists"
 end
