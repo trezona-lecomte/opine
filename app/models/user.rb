@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :comments
+  has_and_belongs_to_many :groups, join_table: :group_memberships
   validates_length_of :password, minimum: 6, on: :create
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
