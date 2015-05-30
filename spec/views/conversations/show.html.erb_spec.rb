@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "artists/show", type: :view do
+RSpec.describe "conversations/show", type: :view do
   before(:each) do
-    @artist = assign(:artist, Artist.create!(
+    @conversation = assign(:conversation, Conversation.create!(
       :name => "Name"
     ))
   end
