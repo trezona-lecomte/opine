@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
 
   def show
     set_comment
-    redirect_to conversation_path(@comment.conversation)
   end
 
   def new
