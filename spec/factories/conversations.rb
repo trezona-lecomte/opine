@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :conversation do
     group
+    name Faker::Lorem.words(4)
 
     # factory :conversation_with_comments do
     #   transient do
