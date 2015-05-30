@@ -3,14 +3,25 @@ require 'rails_helper'
 describe Comment, type: :model do
   
   it { should validate_presence_of :text }
+  it { should belong_to :conversation }
   it { should belong_to :user }
 
   before :each do
     @comment = build :comment
   end
 
-  it 'is valid' do
+  it 'is valid when built' do
     expect(@comment).to be_valid
+  end
+
+  it 'is invalid without a conversation' do
+    @comment.conversation = nil
+    expect(@comment).to_not be_valid
+  end
+
+  it 'is invalid without a user' do
+    @comment.user = nil
+    expect(@comment).to_not be_valid
   end
 
   it 'has editable text' do
