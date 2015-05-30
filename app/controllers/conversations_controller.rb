@@ -9,7 +9,11 @@ class ConversationsController < ApplicationController
   end
 
   def show
-    set_conversation
+    @conversation = Conversation.find(params[:id])
+  end
+
+  def edit
+    @conversation = Conversation.find(params[:id])
   end
 
   def create
