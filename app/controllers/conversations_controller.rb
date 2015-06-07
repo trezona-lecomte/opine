@@ -10,6 +10,7 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = Conversation.find(params[:id])
+    @comments = @conversation.comments.all
   end
 
   def edit
