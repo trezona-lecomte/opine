@@ -67,11 +67,6 @@ ActiveRecord::Schema.define(version: 20150521080023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "groups_users", id: false, force: :cascade do |t|
-    t.integer "group_id", null: false
-    t.integer "user_id",  null: false
-  end
-
   create_table "tracks", force: :cascade do |t|
     t.string   "title"
     t.integer  "artist_id"
@@ -98,7 +93,6 @@ ActiveRecord::Schema.define(version: 20150521080023) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
