@@ -6,12 +6,11 @@
 </p>
 
 <% if @conversation.comments.any? %>
-  <h3>Comments (<%= @conversation.comments.count %>)</h3>
-  <ol class="comments">
-
-    <%= render @comments %>
-  </ol>
+    <h3>Comments (<%= @conversation.comments.count %>)</h3>
+    <ol class="comments">
+        <%= render @comments %>
+    </ol>
 <% end %>
 
-<%= link_to 'Edit', edit_conversation_path(@conversation) %> |
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Edit', edit_conversation_path(@conversation), class: 'button radius small' %> |
+<%= link_to 'Back', artists_path, class: 'button radius small' %>
