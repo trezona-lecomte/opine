@@ -11,6 +11,7 @@ gem 'jbuilder',     '~> 2.0'
 gem 'sdoc',         '~> 0.4.0', group: :doc
 gem 'devise',       '3.4.1'
 gem 'faker',        '1.4.3'
+gem 'foundation-rails',   '5.5.2.1'
 
 group :development, :test do
   gem 'rspec-rails',        '~> 3.0'
