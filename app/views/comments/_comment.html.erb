@@ -1,25 +1,22 @@
-<div class="row small-8"
-    <div class="panel callout">
-        <p id="notice"><%= notice %></p>
+<div class="row small-8">
+  <div class="panel">
+    <p id="notice"><%= notice %></p>
 
-        <p>
-          <strong>Text:</strong>
-          <%= comment.text %>
-        </p>
+    <p>
+      <strong>Text:</strong>
+      <%= comment.text %>
+    </p>
 
-        <p>
-          <strong>User:</strong>
-          <%= comment.user.name %>
-        </p>
+    <p>
+      <strong>User:</strong>
+      <%= comment.user.name %>
+    </p>
 
-        <p>
-          <strong>Conversation:</strong>
-          <%= comment.conversation.name %>
-        </p>
+    <p>
+      <strong>Conversation:</strong>
+      <%= comment.conversation.name %>
+    </p>
 
-        <%= link_to 'Edit', edit_comment_path(comment), class: 'button radius small' %> |
-        <%= link_to 'Back', comments_path, class: 'button radius small' %>
-        <%= link_to 'Back', comments_path, class: 'button radius small' %>
-        <%= link_to 'Back', comments_path, class: 'button radius small' %>
-    </div>
+    <%= link_to 'Edit', edit_comment_path(comment), class: 'button radius small' %>
+  </div>
 </div>

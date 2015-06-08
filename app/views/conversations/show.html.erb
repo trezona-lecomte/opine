@@ -1,16 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="row small-10">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @conversation.name %>
-</p>
+  <h2>
+    <strong><%= @conversation.name %></strong>
+  </h2>
 
-<% if @conversation.comments.any? %>
-    <h3>Comments (<%= @conversation.comments.count %>)</h3>
-    <ol class="comments">
-        <%= render @comments %>
-    </ol>
-<% end %>
+  <% if @conversation.comments.any? %>
+      <h3>Comments (<%= @conversation.comments.count %>)</h3>
+      <ol class="comments">
+          <%= render @comments %>
+      </ol>
+  <% end %>
 
-<%= link_to 'Edit', edit_conversation_path(@conversation), class: 'button radius small' %> |
-<%= link_to 'Back', artists_path, class: 'button radius small' %>
+  <%= link_to 'Edit', edit_conversation_path(@conversation), class: 'button radius small' %> |
+  <%= link_to 'Back', conversations_path, class: 'button radius small' %>
+</div>

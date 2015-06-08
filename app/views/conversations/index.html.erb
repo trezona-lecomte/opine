@@ -13,10 +13,12 @@
   <tbody>
     <% @conversations.each do |conversation| %>
       <tr>
-        <td><%= conversation.name %></td>
-        <td><%= link_to 'Show', conversation %></td>
-        <td><%= link_to 'Edit', edit_artist_path(conversation) %></td>
-        <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><strong><%= conversation.name %></strong></td>
+        <td><%= link_to 'Show', conversation, class: 'button radius small' %></td>
+        <td><%= link_to 'Edit', edit_artist_path(conversation), class: 'button radius small' %></td>
+        <td><%= link_to 'Destroy', conversation, method: :delete,
+                                                 data: { confirm: 'Are you sure?' },
+                                                 class: 'button radius small' %></td>
       </tr>
     <% end %>
   </tbody>
